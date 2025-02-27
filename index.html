@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>khó lắm</title>
-  </head>
-  <body>
-    <h1><i> mệt quá không biết phải làm sao nữa </i></h1>
-    <h6>dú má nó khóc lắm</h6>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Shape</title>
+    <style>
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px 50px 0 0;
+            background: red;
+        }
+        .heart::before {
+            left: 50px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+</body>
 </html>
